@@ -1,0 +1,6 @@
+// src/hooks/useAuth.js
+"use client";
+import { useContext } from "react";
+import { AuthContext } from "@/components/AuthProvider";
+
+export const useAuth = () => useContext(AuthContext);
