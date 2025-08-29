@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Force dark background always */
+  --background: #000000; /* Pure black */
+  --foreground: #ffffff; /* White text */
 }
 
+/* Remove or comment out the media query to force dark mode always */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   background: var(--background);
@@ -40,24 +44,24 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Enhanced scrollbar styling (optional) */
+/* Enhanced scrollbar styling for dark theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #1a1a1a; /* Dark track */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #404040; /* Dark grey thumb */
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #606060; /* Lighter on hover */
 }
 
 /* For users who prefer reduced motion */
@@ -65,4 +69,14 @@ html {
   * {
     scroll-behavior: auto !important;
   }
+}
+
+/* Additional dark theme utilities for cards and components */
+.card-dark {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+}
+
+.text-muted-dark {
+  color: #a3a3a3;
 }
